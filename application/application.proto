@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package application;  
+
+option go_package = "application";  
+  
+message UserID {  
+    string ID = 1;  
+}  
+
+service Reverse {
+    rpc Do(Request) returns (Response) {}
+}
+
+message Request {
+    string message = 1;
+}
+
+message Response {
+    string message = 1;
+}
